@@ -1,0 +1,134 @@
+.baner{
+    position: relative;
+     margin-bottom: 40px;
+    .swiper-pagination{
+        bottom: 0;
+    }
+}
+
+.item-baner{
+  
+    &--first{
+        background: url(../../img/product/baner.png) no-repeat;
+        background-position:center;
+        background-size: cover;
+        .item-baner{
+            &__row{
+                width: 100%;
+                min-height: 80px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            &__img{
+                display: none;
+            }
+            &__title{
+                font-family: 'Rubik';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 150%;
+                color: #414141;
+                
+            }
+        }
+    }
+
+    &--second{
+        .item-baner{
+            &__img{
+                width: 100%;
+                height: 80px;
+                img{
+                   display: block;
+                  max-width: 100%;
+                 height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    .baner{
+        margin-bottom: 60px;
+    }
+    .item-baner{
+  
+        &--first{
+            .item-baner{
+                &__content{
+                    max-width: 584px;
+                    margin: 0 auto;
+                }
+                &__row{
+                    min-height: 160px;
+                    justify-content: unset;
+                    padding-top: 32px;
+                    gap: 9px;
+                }
+                &__img{
+                    display: block;
+                    width: 198px;
+                    height: 132px;
+                    img{
+                        height: 100%;
+                    }
+                }
+                &__title{
+                    font-size: 24px;
+                    
+                }
+            }
+        }
+        &--second{
+            .item-baner{
+                &__img{
+                    height: 160px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:1440px) {
+    .baner{
+        margin-bottom: 80px;
+    }
+    .item-baner{
+  
+        &--first{
+            .item-baner{
+                &__content{
+                    max-width: 1072px;
+                    margin: 0 auto;
+                }
+                &__row{
+                    min-height: 200px;
+                    padding-top: 0;
+                    gap: 18px;
+                }
+                &__img{
+                    width: 300px;
+                    height: 200px;
+                    
+                }
+                &__title{
+                    font-size: 48px; 
+                }
+            }
+        }
+        &--second{
+            .item-baner{
+                &__img{
+                    height: 200px;
+                }
+            }
+        }
+       
+    }
+}

@@ -1,0 +1,345 @@
+.header{
+    background: #FFFFFF;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 8px 0;
+    position: relative;
+    z-index: 1;
+    &__row{
+        display: flex;
+        gap: 0 20px;
+    }
+    &__logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 47px;
+        height: 40px;
+        svg{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .logo__desktop{
+        display: none;
+    }
+    &__right{
+        display: none;
+    }
+    &__center{
+        flex-grow: 1;
+    }
+    &__button{
+        display: none;
+    }
+    &__form{
+        .form__search{
+            height: 40px;
+            input{
+                border: 1px solid #70C05B;
+                border-radius: 4px;
+            }
+        }
+    }
+    
+}
+
+.form{
+    &__search{
+      position: relative;
+      &-icon{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 8px;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg{
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+      }
+      input{
+        padding: 0 34px 0 16px;
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #8F8F8F;
+        &::placeholder{
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: #8F8F8F;
+
+        }
+        
+      }
+    }
+}
+
+.main-menu{
+    display: flex;
+    align-items: center;
+    gap: 0 16px;
+    &__item{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+        &--basket{
+            
+            .main-menu__icon{
+                position: relative;
+                &::after{
+                    content: '99+';
+                    display: block;
+                    position: absolute;
+                    top: -13px;
+                    right: -15px;
+                    background: #FF6633;
+                    border-radius: 4px;
+                    padding: 2px 4px;
+                    min-width: 11.28px;
+
+                    font-family: 'Rubik';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 150%;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    &__icon{
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg{
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    &__text{
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        color: #414141;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .header{
+        padding: 16px 0;
+        position: unset;
+        z-index: unset;
+        margin-bottom: 4px;
+        &__row{
+            align-items: center;
+
+        }
+        &__logo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 47px;
+            height: 40px;
+            svg{
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+       
+       
+        &__center{
+            flex-grow: unset;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-grow: 1;
+
+        }
+        &__button{
+            display: inline-flex;
+            background: #70C05B;
+            border-radius: 4px;
+            transition: all 300ms;
+            &:hover{
+                box-shadow: 4px 8px 16px rgba(112, 192, 91, 0.2);
+            }
+            &-text{
+                display: none;
+            }
+            &-icon{
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                span{
+                    display: block;
+                    background: #FFFFFF;
+                    height: 1px;
+                    width: 19px;
+                    position: relative;
+                    &::before{
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: -5px;
+                        left: 0;
+                        background: #FFFFFF;
+                        height: 100%;
+                        width: 100%;
+                        
+                    }
+                    &::after{
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        bottom: -5px;
+                        left: 0;
+                        background: #FFFFFF;
+                        height: 100%;
+                        width: 100%;
+                        
+                    }
+                }
+            }
+            
+        }
+       
+        &__form{
+            width: 100%;
+        }
+        &__right{
+            display: flex;
+            align-items: center;
+            gap: 0 16px;
+        }
+        &__user{
+            &-img{
+                height: 40px;
+                width: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                overflow: hidden;
+                img{
+                    height: auto;
+                }
+            }
+            &-icon{
+                display: none;
+            }
+            &-name{
+                display: none;
+            }
+        }
+       
+        
+    }
+
+}
+@media screen and (min-width:1440px) {
+    .header{
+        &__row{
+            gap: 0 40px;
+        }
+        &__logo{
+            width: 152px;
+            height: 32px;
+            svg{
+                display: none;
+            }
+            .logo__desktop{
+                display: block;
+            }
+        }
+        &__center{
+            gap: 0 16px;
+        }
+        &__button{
+            display: inline-flex;
+            padding:  8px;
+            &-row{
+                display: flex;
+                align-items: center;
+                gap: 0 8px;
+            }
+            &-text{
+                display: block;
+                font-family: 'Rubik';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                color: #FFFFFF;
+                text-align: center;
+                width: 92px;       
+            }
+            &-icon{
+                width: 24px;
+                height: 24px;
+            }
+            
+        }
+       
+       
+        &__right{
+            gap: 0 24px;
+        }
+        &__user{
+           padding: 8px;
+            &-row{
+                display: flex;
+                align-items: center;
+                gap:0 10px;
+            }
+            &-body{
+                display: flex;
+                align-items: center;
+                gap: 0 10px;
+            }
+            &-icon{
+                height: 40px;
+                width: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transform: rotate(90deg);
+            }
+            &-name{
+                font-family: 'Rubik';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                display: flex;
+                align-items: center;
+                color: #232323;
+                min-width: 85px;
+            }
+        }
+       
+        
+    }
+    .main-menu{
+        gap: 0 24px;  
+    }
+
+}

@@ -1,0 +1,645 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input {
+  width: 100%;
+  height: 100%;
+}
+input:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.d-none {
+  display: none;
+}
+
+.page-wrapper {
+  overflow: hidden;
+}
+
+body {
+  font-family: "Rubik";
+  background: #FBF8EC;
+}
+
+.wrapper {
+  padding: 0 12px;
+}
+
+.title {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+  color: #414141;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    max-width: 736px;
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    padding: 0 0;
+    max-width: 1208px;
+    margin: 0 auto;
+  }
+}
+.header {
+  background: #FFFFFF;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  position: relative;
+  z-index: 1;
+}
+.header__row {
+  display: flex;
+  gap: 0 20px;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 47px;
+  height: 40px;
+}
+.header__logo svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.header .logo__desktop {
+  display: none;
+}
+.header__right {
+  display: none;
+}
+.header__center {
+  flex-grow: 1;
+}
+.header__button {
+  display: none;
+}
+.header__form .form__search {
+  height: 40px;
+}
+.header__form .form__search input {
+  border: 1px solid #70C05B;
+  border-radius: 4px;
+}
+
+.form__search {
+  position: relative;
+}
+.form__search-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form__search-icon svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.form__search input {
+  padding: 0 34px 0 16px;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #8F8F8F;
+}
+.form__search input::-moz-placeholder {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #8F8F8F;
+}
+.form__search input::placeholder {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #8F8F8F;
+}
+
+.main-menu {
+  display: flex;
+  align-items: center;
+  gap: 0 16px;
+}
+.main-menu__item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+.main-menu__item--basket .main-menu__icon {
+  position: relative;
+}
+.main-menu__item--basket .main-menu__icon::after {
+  content: "99+";
+  display: block;
+  position: absolute;
+  top: -13px;
+  right: -15px;
+  background: #FF6633;
+  border-radius: 4px;
+  padding: 2px 4px;
+  min-width: 11.28px;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #fff;
+}
+.main-menu__icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-menu__icon svg {
+  max-width: 100%;
+  height: auto;
+}
+.main-menu__text {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #414141;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 16px 0;
+    position: unset;
+    z-index: unset;
+    margin-bottom: 4px;
+  }
+  .header__row {
+    align-items: center;
+  }
+  .header__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 47px;
+    height: 40px;
+  }
+  .header__logo svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .header__center {
+    flex-grow: unset;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+  }
+  .header__button {
+    display: inline-flex;
+    background: #70C05B;
+    border-radius: 4px;
+    transition: all 300ms;
+  }
+  .header__button:hover {
+    box-shadow: 4px 8px 16px rgba(112, 192, 91, 0.2);
+  }
+  .header__button-text {
+    display: none;
+  }
+  .header__button-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header__button-icon span {
+    display: block;
+    background: #FFFFFF;
+    height: 1px;
+    width: 19px;
+    position: relative;
+  }
+  .header__button-icon span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 0;
+    background: #FFFFFF;
+    height: 100%;
+    width: 100%;
+  }
+  .header__button-icon span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background: #FFFFFF;
+    height: 100%;
+    width: 100%;
+  }
+  .header__form {
+    width: 100%;
+  }
+  .header__right {
+    display: flex;
+    align-items: center;
+    gap: 0 16px;
+  }
+  .header__user-img {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .header__user-img img {
+    height: auto;
+  }
+  .header__user-icon {
+    display: none;
+  }
+  .header__user-name {
+    display: none;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .header__row {
+    gap: 0 40px;
+  }
+  .header__logo {
+    width: 152px;
+    height: 32px;
+  }
+  .header__logo svg {
+    display: none;
+  }
+  .header__logo .logo__desktop {
+    display: block;
+  }
+  .header__center {
+    gap: 0 16px;
+  }
+  .header__button {
+    display: inline-flex;
+    padding: 8px;
+  }
+  .header__button-row {
+    display: flex;
+    align-items: center;
+    gap: 0 8px;
+  }
+  .header__button-text {
+    display: block;
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #FFFFFF;
+    text-align: center;
+    width: 92px;
+  }
+  .header__button-icon {
+    width: 24px;
+    height: 24px;
+  }
+  .header__right {
+    gap: 0 24px;
+  }
+  .header__user {
+    padding: 8px;
+  }
+  .header__user-row {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+  }
+  .header__user-body {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+  }
+  .header__user-icon {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(90deg);
+  }
+  .header__user-name {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    color: #232323;
+    min-width: 85px;
+  }
+  .main-menu {
+    gap: 0 24px;
+  }
+}
+.baner {
+  position: relative;
+  margin-bottom: 40px;
+}
+.baner .swiper-pagination {
+  bottom: 0;
+}
+
+.item-baner--first {
+  background: url(../../img/product/baner.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.item-baner--first .item-baner__row {
+  width: 100%;
+  min-height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item-baner--first .item-baner__img {
+  display: none;
+}
+.item-baner--first .item-baner__title {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  color: #414141;
+}
+.item-baner--second .item-baner__img {
+  width: 100%;
+  height: 80px;
+}
+.item-baner--second .item-baner__img img {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .baner {
+    margin-bottom: 60px;
+  }
+  .item-baner--first .item-baner__content {
+    max-width: 584px;
+    margin: 0 auto;
+  }
+  .item-baner--first .item-baner__row {
+    min-height: 160px;
+    justify-content: unset;
+    padding-top: 32px;
+    gap: 9px;
+  }
+  .item-baner--first .item-baner__img {
+    display: block;
+    width: 198px;
+    height: 132px;
+  }
+  .item-baner--first .item-baner__img img {
+    height: 100%;
+  }
+  .item-baner--first .item-baner__title {
+    font-size: 24px;
+  }
+  .item-baner--second .item-baner__img {
+    height: 160px;
+  }
+  .item-baner--second .item-baner__img img {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .baner {
+    margin-bottom: 80px;
+  }
+  .item-baner--first .item-baner__content {
+    max-width: 1072px;
+    margin: 0 auto;
+  }
+  .item-baner--first .item-baner__row {
+    min-height: 200px;
+    padding-top: 0;
+    gap: 18px;
+  }
+  .item-baner--first .item-baner__img {
+    width: 300px;
+    height: 200px;
+  }
+  .item-baner--first .item-baner__title {
+    font-size: 48px;
+  }
+  .item-baner--second .item-baner__img {
+    height: 200px;
+  }
+}
+.list-product__head {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 20px;
+  margin-bottom: 16px;
+}
+.list-product__link {
+  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+}
+.list-product__link-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.list-product__link-text {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #606060;
+  min-width: 120px;
+  text-align: center;
+}
+.list-product__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.product {
+  background: #FFFFFF;
+}
+.product__head {
+  position: relative;
+}
+.product__body {
+  padding: 8px;
+}
+.product__like-icon {
+  width: 32px;
+  height: 32px;
+  background: rgba(243, 242, 241, 0.5);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}
+.product__like-icon svg {
+  width: 21.9px;
+  height: 19.23px;
+}
+.product__reduction {
+  background: #FF6633;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #FFFFFF;
+  padding: 3px 8px;
+}
+.product__img {
+  width: 160px;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.product__img img {
+  max-width: 100%;
+  height: 100%;
+}
+.product__price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.product__price-howToPay {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 150%;
+  color: #BFBFBF;
+}
+.product__price--carte {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  color: #414141;
+}
+.product__price--normal {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #606060;
+}
+.product__name {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #414141;
+  margin-bottom: 8px;
+  min-height: 54px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.product__note {
+  display: flex;
+  align-items: center;
+  gap: 0 4px;
+  margin-bottom: 8px;
+}
+.product__note-icon {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product__button {
+  width: 100%;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border: 1px solid #70C05B;
+  border-radius: 4px;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #70C05B;
+  text-align: center;
+}/*# sourceMappingURL=main.css.map */
