@@ -41,6 +41,24 @@
             }
         }
     }
+
+    &.basketEmpty{
+        .main-menu{
+            &__item{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                align-items: center;
+                &--basket{
+                    .main-menu__icon{
+                        &::after{
+                           display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
     
 }
 
@@ -99,15 +117,20 @@
             .main-menu__icon{
                 position: relative;
                 &::after{
-                    content: '99+';
-                    display: block;
+                    content: attr(data-number);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width:24px;
+                    height: 24px;
+
                     position: absolute;
-                    top: -13px;
-                    right: -15px;
+                    top: -16px;
+                    right: -12px;
+
                     background: #FF6633;
                     border-radius: 4px;
-                    padding: 2px 4px;
-                    min-width: 11.28px;
+                    // padding: 2px 4px;
 
                     font-family: 'Rubik';
                     font-style: normal;

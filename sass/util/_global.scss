@@ -18,11 +18,22 @@ body{
     color: #414141;
 }
 
+.d-none{
+    display: none!important;
+}
+.section{
+    margin-bottom: 80px;
+}
+
+
 @media screen and (min-width:768px){
     .wrapper{
         max-width: 736px;
         padding: 0 ;
         margin: 0 auto;
+    }
+    .section{
+        margin-bottom: 100px;
     }
 }
 @media screen and (min-width:1440px){
@@ -30,5 +41,8 @@ body{
         padding: 0 0;
         max-width: 1208px;
          margin: 0 auto;
+    }
+    .section{
+        margin-bottom: 120px;
     }
 }

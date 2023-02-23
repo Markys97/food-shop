@@ -1,0 +1,113 @@
+.localization{
+    &__title{
+        margin-bottom:16px;
+    }
+}
+
+.tab-localization{
+    &__head{
+        margin-bottom: 16px;
+    }
+    &__row{ 
+        display: flex;
+        justify-content: flex-start;
+        gap: 8px;
+        flex-wrap: wrap;
+
+        
+    }
+    &__body{
+        width: 100%;
+        height: 354px;
+        img{
+            display: block;
+           max-width: 100%;
+           height: 100%;
+
+        }
+    }
+
+}
+
+.button-tab{
+    display: inline-block;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    text-align: center;
+    color: #606060;
+    padding: 4px 8px;
+    background: #F3F2F1;
+    border-radius: 4px;
+    transition: all 300ms;
+    &__text{
+        display: flex;
+        min-width: 83px;
+        height: 24px;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+}
+
+.button-tab.active{
+    background: #70C05B;
+    color: #FFFFFF;
+}
+
+@media screen and (min-width:768px) {
+    .localization{
+        &__title{
+            margin-bottom:32px;
+        }
+    }
+    .tab-localization{
+        &__head{
+            margin-bottom: 16px;
+        }
+        &__row{
+            gap: 16px; 
+        }
+        &__body{
+            height: 354px;
+        }
+    
+    }
+
+    .button-tab{
+        &__text{
+            min-width: 75px;
+        }
+    
+    }
+    
+}
+@media screen and (min-width:1440px) {
+    .localization{
+        &__title{
+            margin-bottom:40px;
+        }
+    }
+    .tab-localization{
+        &__head{
+            margin-bottom: 24px;
+        }
+        &__row{
+            gap: 24px; 
+        }
+       
+    
+    }
+
+    .button-tab{
+        &__text{
+            min-width: 81px;
+        }
+    
+    }
+    
+}
+

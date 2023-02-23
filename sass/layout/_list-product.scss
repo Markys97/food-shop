@@ -1,10 +1,11 @@
 .list-product{
+    margin-bottom: 80px;
     &__head{
         margin-bottom: 16px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 0 20px;
+        gap: 0 48px;
         margin-bottom: 16px;
        
     }
@@ -41,6 +42,15 @@
 .product{
    
     background:#FFFFFF;
+    transition: all 300ms;
+    &:hover{
+        box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
+        .product__button{
+            background: #FF6633;
+            color: #FFFFFF;
+            border: none;
+        }
+    }
     &__head{
         position: relative;
      
@@ -59,6 +69,11 @@
         position: absolute;
         right: 8px;
         top: 8px;
+        transition: all 300ms;
+        cursor: pointer;
+        &:hover{
+            background: rgba(#FCD5BA,  0.5);
+        }
         svg{
             width: 21.9px;
             height: 19.23px;
@@ -161,6 +176,34 @@
     }
     &__button{
         width: 100%;
+        transition: all 300ms;
+
+    }
+    &__handlerNumber{
+        display: flex;
+        align-items: center;
+
+        background: #70C05B;
+        border-radius: 4px;
+
+        padding: 8px;
+        gap: 0 8px;
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #FFFFFF;
+        &-value{
+            flex-grow: 1;
+            text-align: center;
+        }
+        &-button{
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            text-align: center;
+        }
     }
 
 }
@@ -183,3 +226,83 @@
     text-align: center;
 }
 
+
+
+@media screen and (min-width:768px){
+    .list-product{
+        margin-bottom: 100px;
+        &__head{
+            margin-bottom: 32px;
+        }
+        &__item{
+            &:last-child{
+                display: none;
+            }
+        }
+      
+        &__grid{
+            grid-template-columns: repeat(3,minmax(160px,1fr));
+            gap: 32px;
+        }
+    }
+
+    .product{
+        &__reduction{
+            font-size: 16px;
+            padding: 4px 8px;
+            
+        }
+        &__img{
+            width: 224px;
+        }
+        &__price{          
+            &-howToPay{
+                font-size: 12px;
+            }
+            &--carte{
+                font-size: 18px;
+            }
+            &--normal{
+                font-size: 16px;
+                
+            }
+        }
+        &__name{
+            font-size: 16px;
+            min-height: 48px;         
+        }
+    }
+    
+}
+
+
+@media screen and (min-width:1440px){
+    .list-product{
+        margin-bottom: 120px;
+        &__head{
+            margin-bottom: 40px;
+        }
+        &__item{
+            &:last-child{
+                display: block;
+            }
+        }
+      
+        &__grid{
+            grid-template-columns: repeat(4,minmax(160px,1fr));
+            gap: 40px;
+        }
+    }
+
+    .product{
+        &__img{
+            width: 272px;
+        }
+        &__name{
+            -webkit-line-clamp: 2;
+                    line-clamp: 2; 
+
+        }
+    }
+    
+}
